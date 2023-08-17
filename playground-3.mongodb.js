@@ -1,43 +1,37 @@
-/* global use, db */
-// MongoDB Playground
-// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
-const database = 'henrique';
-const collection = 'NEW_COLLECTION_NAME';
+//criar um banco de dados sobre academia
 
-// The current database to use.
-use(database);
+//Código SQL:
+// CREATE DATABASE bdacademia
 
-// Create a new collection.
-db.createCollection(collection);
+//Para criar utilizando o mongodob usamos
 
-// The prototype form to create a collection:
-/* db.createCollection( <name>,
-  {
-    capped: <boolean>,
-    autoIndexId: <boolean>,
-    size: <number>,
-    max: <number>,
-    storageEngine: <document>,
-    validator: <document>,
-    validationLevel: <string>,
-    validationAction: <string>,
-    indexOptionDefaults: <document>,
-    viewOn: <string>,
-    pipeline: <pipeline>,
-    collation: <document>,
-    writeConcern: <document>,
-    timeseries: { // Added in MongoDB 5.0
-      timeField: <string>, // required for time series collections
-      metaField: <string>,
-      granularity: <string>,
-      bucketMaxSpanSeconds: <number>, // Added in MongoDB 6.3
-      bucketRoundingSeconds: <number>, // Added in MongoDB 6.3
-    },
-    expireAfterSeconds: <number>,
-    clusteredIndex: <document>, // Added in MongoDB 5.3
-  }
-)*/
+//Para criar uma tabela "personal" em SQL
+//Create Table personal(
+  // id INT PRIMARY KEY,
+  // nome VARCHAR(45),
+  // salario decimal(2)
+  
+  //);
+  
+//   //COmo criar no mongodb?
+//   db.createCollection("personal");
+  
+//   //Inserir dados no mongodb
+//   db.personal.insertOne(
+//     {_id:1, nome:"Júlio", salario:3000}
+//     );
+//     use("bdacademia");
+// db.personal.insertOne(
+//   {_id:2, nome:"Roni", salario:8000}
+// );
+// db.personal.insertOne(
+//   {_id:3, nome:"Pedro", salario:5000}
+// );
 
-// More information on the `createCollection` command can be found at:
-// https://www.mongodb.com/docs/manual/reference/method/db.createCollection/
+//como consultar no mongo
+//filtrando dados com mongo
+use("bdacademia");
+db.personal.find({_id:1});
+db.personal.find({_id:1},{nome:true,salario:true,_id:false});
+
