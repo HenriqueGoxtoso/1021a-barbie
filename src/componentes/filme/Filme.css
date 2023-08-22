@@ -1,0 +1,9 @@
+.filme-content{
+   width: 300px;
+    background-color: red;
+}
+
+.filme-content>img{
+    width: 100%;
+    height: auto;
+}
