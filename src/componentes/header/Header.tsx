@@ -6,6 +6,7 @@ function Header(){
             <div>
                 <img id = "logoheader" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Barbie_Logo.svg/2560px-Barbie_Logo.svg.png" alt="" />
             </div>
+            
             <nav>
                 <ul>
                     <li>

@@ -2,4 +2,12 @@
     display: flex;
     gap: 15px;
     padding: 15px 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.pesquisa{
+    width: 110px;
+    height: 10px;
 }

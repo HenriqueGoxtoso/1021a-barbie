@@ -3,12 +3,23 @@ import './Main.css'
 export default function Main(){
     return(
         <main className="content-main">
+            <input className='pesquisa' type="text" placeholder='Pesquise um filme' />
+            <p>Digitado:</p>
             <Filme titulo='Barbie'
             sinopse='Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.'
-            imagem='blabla'/>
+            imagem='/barbie.png'/>
             <Filme titulo='Barbie'
             sinopse='Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.'
-            imagem='blabla'/>
+            imagem='/bumb.jpg'/>
+            <Filme titulo='Barbie'
+            sinopse='Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.'
+            imagem='/barbie.png'/>
+            <Filme titulo='Barbie'
+            sinopse='Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.'
+            imagem='/barbie.png'/>
+            <Filme titulo='Barbie'
+            sinopse='Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.'
+            imagem='/barbie.png'/>
         </main>
     )
 }
