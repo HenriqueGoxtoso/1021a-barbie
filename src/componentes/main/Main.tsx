@@ -13,6 +13,22 @@ export default function Main() {
     const [texto,setTexto]=useState("Barbie")
     const filmes =[
         
+    <main className="content-main">
+        {filmes
+                     .filter((filme) => {
+                     const textoSemEspacos = texto.replace(/\s/g, ''); // Remove espaços em branco do texto
+                     const tituloSemEspacos = filme.titulo.replace(/\s/g, ''); // Remove espaços em branco do título do filme
+                     const sinopseSemEspacos = filme.sinopse.replace(/\s/g, ''); // Remove espaços em branco da sinopse do filme
+                     const tudo = tituloSemEspacos.toLowerCase().includes(textoSemEspacos.toLowerCase());
+                     const tudo2 = sinopseSemEspacos.toLowerCase().includes(textoSemEspacos.toLowerCase());
+                     const tudo3 = tudo || tudo2; // Use '||' (ou) para permitir que qualquer uma das condições seja verdadeira
+                     return tudo3;
+                     })
+                     .map((filme) => (
+                     <Filme key={filme.id} titulo={filme.titulo} sinopse={filme.sinopse} imagem={filme.imagem} />
+                     ))}
+</main>
+        
         /*{
             id:1,
             titulo:'Barbie',
