@@ -16,7 +16,7 @@ export default function Main() {
   const [filmes, setFilmes] = useState<FilmesType[]>([]);
 
   useEffect(() => {
-    const buscarFilmes = async () => {
+    const buscaMovies = async () => {
       try {
         const resposta = await axios.get<FilmesType[]>(URL_API);
         setFilmes(resposta.data);
@@ -25,8 +25,9 @@ export default function Main() {
       }
     };
 
-    buscarFilmes();
+    buscaMovies();
   }, []);
+
     //A função recebe um atributo chamado e de "event"
     function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
         setTexto(e.target.value)
